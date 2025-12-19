@@ -1,22 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import { Routes, Route } from "react-router-dom";
 import SupplementsPage from './pages/Supplements';
-function App() {
-  const [count, setCount] = useState(0)
+// import NutritionAndCalories from "./containers/NutritionAndCalories/NutritionAndCalories";
 
-  return (
-    <>
-       <Routes>
+function App() {
+    return (
+        <Routes>
+            {/* <Route
+                path="/nutrition"
+                element={<NutritionAndCalories />}
+            /> */}
             <Route
                 path="/Supplements"
                 element={<SupplementsPage/>}
             />
         </Routes>
-    </>
-  )
+    );
 }
 
-export default App
+export default App;
