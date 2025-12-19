@@ -5,14 +5,12 @@ import NutritionResult from "../../Components/Nutrition/NutritionResult";
 import MealSuggestions from "../../Components/Nutrition/MealSuggestions.jsx";
 import Header from "../../Components/Header/Header";
 
-
-
 export default function NutritionAndCalories() {
     const [form, setForm] = useState({
         weight: "",
         height: "",
         age: "",
-        gender: "",   // بدون default
+        gender: "",
     });
 
     const [maintenance, setMaintenance] = useState(null);
@@ -38,7 +36,6 @@ export default function NutritionAndCalories() {
             return;
         }
 
-        // BMR بدون Activity
         const bmr =
             g === "male"
                 ? 10 * w + 6.25 * h - 5 * a + 5
@@ -60,31 +57,49 @@ export default function NutritionAndCalories() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white px-6 pt-20 pb-16">
-            <Header />
-            <div className="max-w-5xl mx-auto space-y-10">
-                <NutritionForm
-                    form={form}
-                    onChange={handleChange}
-                    onCalculate={calculate}
-                    formError={formError}
-                    planError={planError}
-                />
 
-                <PlanCards
-                    selectedPlan={selectedPlan}
-                    onSelect={handlePlanSelect}
-                />
+        <div
+            className="min-h-screen bg-cover bg-center bg-no-repeat"
+            style={{
+                backgroundImage: "url('/images/nutritionPic.jpg')",
+            }}
+        >
 
-                {maintenance &&  (
-                    <>
-                    <NutritionResult
-                        maintenance={maintenance}
-                        plan={selectedPlan}
-                    />
-                    <MealSuggestions plan={selectedPlan}/>
-                    </>
-                )}
+            <div className="min-h-screen bg-black/75 backdrop-blur-sm text-white">
+                <Header />
+
+
+                <div className="px-6 pt-28 pb-16">
+                    <div className="max-w-5xl mx-auto space-y-10">
+
+                        <NutritionForm
+                            form={form}
+                            onChange={handleChange}
+                            onCalculate={calculate}
+                            formError={formError}
+                            planError={planError}
+                        />
+
+                        <PlanCards
+                            selectedPlan={selectedPlan}
+                            onSelect={handlePlanSelect}
+                        />
+
+                        {maintenance && (
+                            <>
+                                <NutritionResult
+                                    maintenance={maintenance}
+                                    plan={selectedPlan}
+                                />
+
+                                {selectedPlan && (
+                                    <MealSuggestions plan={selectedPlan} />
+                                )}
+                            </>
+                        )}
+
+                    </div>
+                </div>
             </div>
         </div>
     );

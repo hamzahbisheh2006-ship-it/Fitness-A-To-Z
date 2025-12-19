@@ -11,7 +11,7 @@ export default function NutritionForm({
                 Calculate Your <span className="text-[#E10600]">Calories</span>
             </h2>
 
-            {/* تحذير تعبئة الفورم */}
+
             {formError && (
                 <p className="mb-4 text-red-500 font-semibold">
                     {formError}
@@ -46,7 +46,7 @@ export default function NutritionForm({
                     className="w-full bg-black border border-[#E10600] px-4 py-3 rounded"
                 />
 
-                {/* الجنس بدون default */}
+
                 <select
                     name="gender"
                     value={form.gender}
@@ -66,7 +66,7 @@ export default function NutritionForm({
                     Calculate Calories
                 </button>
 
-                {/* تحذير اختيار المسار */}
+
                 {planError && (
                     <p className="mt-2 text-red-500 font-semibold">
                         {planError}
