@@ -1,9 +1,0 @@
-.main-nav a {
-    color: white;
-    transition: color 0.3s;
-    text-decoration: none;
-}
-
-.main-nav a:hover {
-    color: #dc2626;
-}
