@@ -1,10 +1,12 @@
-export default function NutritionForm({
-                                          form,
-                                          onChange,
-                                          onCalculate,
-                                          formError,
-                                          planError,
-                                      }) {
+import { useForm } from "react-hook-form";
+
+export default function NutritionForm({ onCalculate }) {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
     return (
         <div className="border border-[#E10600] rounded-2xl p-8">
             <h2 className="text-3xl font-extrabold mb-2">
@@ -12,67 +14,64 @@ export default function NutritionForm({
             </h2>
 
 
-            {formError && (
-                <p className="mb-4 text-red-500 font-semibold">
-                    {formError}
-                </p>
-            )}
+            <form
+                onSubmit={handleSubmit(onCalculate)}
+                className="space-y-4"
+            >
 
-            <div className="space-y-4">
                 <input
                     type="number"
-                    name="weight"
                     placeholder="Weight (kg)"
-                    value={form.weight}
-                    onChange={onChange}
+                    {...register("weight", { required: true })}
                     className="w-full bg-black border border-[#E10600] px-4 py-3 rounded"
                 />
+                {errors.weight && (
+                    <p className="text-red-500 text-sm">Weight is required</p>
+                )}
+
 
                 <input
                     type="number"
-                    name="height"
                     placeholder="Height (cm)"
-                    value={form.height}
-                    onChange={onChange}
+                    {...register("height", { required: true })}
                     className="w-full bg-black border border-[#E10600] px-4 py-3 rounded"
                 />
+                {errors.height && (
+                    <p className="text-red-500 text-sm">Height is required</p>
+                )}
+
 
                 <input
                     type="number"
-                    name="age"
                     placeholder="Age (years)"
-                    value={form.age}
-                    onChange={onChange}
+                    {...register("age", { required: true })}
                     className="w-full bg-black border border-[#E10600] px-4 py-3 rounded"
                 />
+                {errors.age && (
+                    <p className="text-red-500 text-sm">Age is required</p>
+                )}
 
 
                 <select
-                    name="gender"
-                    value={form.gender}
-                    onChange={onChange}
+                    {...register("gender", { required: true })}
                     className="w-full bg-black border border-[#E10600] px-4 py-3 rounded"
                 >
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
+                {errors.gender && (
+                    <p className="text-red-500 text-sm">Gender is required</p>
+                )}
+
 
                 <button
-                    type="button"
-                    onClick={onCalculate}
+                    type="submit"
                     className="w-full mt-4 bg-[#E10600] hover:bg-red-700 transition text-white font-bold py-3 rounded-xl"
                 >
                     Calculate Calories
                 </button>
-
-
-                {planError && (
-                    <p className="mt-2 text-red-500 font-semibold">
-                        {planError}
-                    </p>
-                )}
-            </div>
+            </form>
         </div>
     );
 }

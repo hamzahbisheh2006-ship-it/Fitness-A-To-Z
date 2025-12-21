@@ -4,37 +4,18 @@ import PlanCards from "../../Components/Nutrition/PlanCards";
 import NutritionResult from "../../Components/Nutrition/NutritionResult";
 import MealSuggestions from "../../Components/Nutrition/MealSuggestions.jsx";
 import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer"
 
 export default function NutritionAndCalories() {
-    const [form, setForm] = useState({
-        weight: "",
-        height: "",
-        age: "",
-        gender: "",
-    });
-
     const [maintenance, setMaintenance] = useState(null);
     const [selectedPlan, setSelectedPlan] = useState(null);
-    const [formError, setFormError] = useState("");
     const [planError, setPlanError] = useState("");
 
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-        setFormError("");
-    };
-
-    const calculate = () => {
-        const w = +form.weight;
-        const h = +form.height;
-        const a = +form.age;
-        const g = form.gender;
-
-        if (!w || !h || !a || !g) {
-            setFormError("Please fill all fields before calculating calories.");
-            setMaintenance(null);
-            setSelectedPlan(null);
-            return;
-        }
+    const calculate = (data) => {
+        const w = +data.weight;
+        const h = +data.height;
+        const a = +data.age;
+        const g = data.gender;
 
         const bmr =
             g === "male"
@@ -42,48 +23,47 @@ export default function NutritionAndCalories() {
                 : 10 * w + 6.25 * h - 5 * a - 161;
 
         setMaintenance(Math.round(bmr));
-        setFormError("");
-        setPlanError("");
         setSelectedPlan(null);
+        setPlanError("");
     };
 
     const handlePlanSelect = (plan) => {
         if (!maintenance) {
-            setPlanError("Please calculate calories first.");
+            setPlanError("Please fill the form and calculate calories first");
             return;
         }
-        setPlanError("");
         setSelectedPlan(plan);
     };
 
-    return (
 
+    return (
         <div
             className="min-h-screen bg-cover bg-center bg-no-repeat"
             style={{
                 backgroundImage: "url('/images/nutritionPic.jpg')",
             }}
         >
-
             <div className="min-h-screen bg-black/75 backdrop-blur-sm text-white">
                 <Header />
-
 
                 <div className="px-6 pt-28 pb-16">
                     <div className="max-w-5xl mx-auto space-y-10">
 
-                        <NutritionForm
-                            form={form}
-                            onChange={handleChange}
-                            onCalculate={calculate}
-                            formError={formError}
-                            planError={planError}
-                        />
+                        <NutritionForm onCalculate={calculate} />
+
+
+                        {planError && (
+                            <p className="text-red-500 font-semibold">
+                                {planError}
+                            </p>
+                        )}
 
                         <PlanCards
                             selectedPlan={selectedPlan}
                             onSelect={handlePlanSelect}
+
                         />
+
 
                         {maintenance && (
                             <>
@@ -95,11 +75,15 @@ export default function NutritionAndCalories() {
                                 {selectedPlan && (
                                     <MealSuggestions plan={selectedPlan} />
                                 )}
+
+                                {planError && (
+                                    <p className="text-red-500 font-semibold">{planError}</p>
+                                )}
                             </>
                         )}
-
                     </div>
                 </div>
+                <Footer/>
             </div>
         </div>
     );

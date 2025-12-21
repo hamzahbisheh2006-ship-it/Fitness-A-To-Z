@@ -8,6 +8,8 @@ function App() {
                 path="/nutrition"
                 element={<NutritionAndCalories />}
             />
+
+
         </Routes>
     );
 }

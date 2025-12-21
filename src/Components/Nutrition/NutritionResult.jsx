@@ -1,4 +1,6 @@
 export default function NutritionResult({ maintenance, plan }) {
+    if (!maintenance) return null;
+
     let calories = maintenance;
     let title = "Maintenance Calories";
     let desc = "Calories needed to maintain your current weight.";

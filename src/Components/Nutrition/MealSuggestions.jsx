@@ -6,7 +6,10 @@ export default function MealSuggestions({ plan }) {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        if (!plan) return;
+        if (!plan) {
+            setMeals([]);
+            return;
+        }
 
         setLoading(true);
         setError("");
@@ -22,6 +25,8 @@ export default function MealSuggestions({ plan }) {
                 setLoading(false);
             });
     }, [plan]);
+
+    if (!plan) return null;
 
     if (loading) {
         return <p className="text-white/70">Loading meal suggestions...</p>;
