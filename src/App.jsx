@@ -1,15 +1,19 @@
-import { Routes, Route } from "react-router-dom";
-import NutritionAndCalories from "./containers/NutritionAndCalories/NutritionAndCalories";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Exercises from "./containers/Exercises_page/Exercises";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
-    return (
-        <Routes>
-            <Route
-                path="/nutrition"
-                element={<NutritionAndCalories />}
-            />
-        </Routes>
-    );
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Navigate to="/exercises" replace />} />
+        <Route path="/exercises" element={<Exercises />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
