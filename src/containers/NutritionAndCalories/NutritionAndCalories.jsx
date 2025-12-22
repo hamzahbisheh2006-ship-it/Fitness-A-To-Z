@@ -5,6 +5,7 @@ import NutritionResult from "../../Components/Nutrition/NutritionResult";
 import MealSuggestions from "../../Components/Nutrition/MealSuggestions.jsx";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer"
+import nutritionPic from "../../assets/NutrittionPictures/nutritionPic.jpg";
 
 export default function NutritionAndCalories() {
     const [maintenance, setMaintenance] = useState(null);
@@ -40,11 +41,12 @@ export default function NutritionAndCalories() {
         <div
             className="min-h-screen bg-cover bg-center bg-no-repeat"
             style={{
-                backgroundImage: "url('/images/nutritionPic.jpg')",
+                backgroundImage:`url(${nutritionPic})`,
             }}
         >
+            <Header />
             <div className="min-h-screen bg-black/75 backdrop-blur-sm text-white">
-                <Header />
+
 
                 <div className="px-6 pt-28 pb-16">
                     <div className="max-w-5xl mx-auto space-y-10">
@@ -53,7 +55,7 @@ export default function NutritionAndCalories() {
 
 
                         {planError && (
-                            <p className="text-red-500 font-semibold">
+                            <p className="text-[var(--color-error)] font-semibold">
                                 {planError}
                             </p>
                         )}
@@ -77,7 +79,7 @@ export default function NutritionAndCalories() {
                                 )}
 
                                 {planError && (
-                                    <p className="text-red-500 font-semibold">{planError}</p>
+                                    <p className="text-[var(--color-error)] font-semibold">{planError}</p>
                                 )}
                             </>
                         )}

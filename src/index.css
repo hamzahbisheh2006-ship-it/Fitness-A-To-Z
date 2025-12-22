@@ -1,47 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type="number"] {
+.no-spinner {
     -moz-appearance: textfield;
 }
 
-:root {
-    /* =========================
-       Primary (Brand Color)
-       ========================= */
-    --primary-500: #E10600;                 /* اللون الأساسي */
-    --primary-50: rgba(225, 6, 0, 0.15);    /* خلفيات خفيفة */
-    --primary-100: rgba(225, 6, 0, 0.30);   /* خلفيات أو hover خفيف */
-    --primary-700: #B10500;                 /* hover غامق */
-    --primary-900: #7A0400;                 /* نص غامق جداً */
+@theme {
 
-    /* =========================
-       Base Colors
-       ========================= */
-    --black: #000000;
-    --white: #FFFFFF;
-
-    /* =========================
-       Overlays
-       ========================= */
-    --black-75: rgba(0, 0, 0, 0.75);
-
-    /* =========================
-       Text Variants
-       ========================= */
-    --white-80: rgba(255, 255, 255, 0.80);
-    --white-70: rgba(255, 255, 255, 0.70);
-
-    /* =========================
-       States
-       ========================= */
-    --error: #EF4444;
+    --color-primary: #E10600;
+    --color-primary-hover: #c10500;
+    --color-bg-main: #000000;
+    --color-bg-overlay: rgba(0,0,0,0.75);
+    --color-text-main: #ffffff;
+    --color-text-muted: rgba(255,255,255,0.8);
+    --color-text-muted-soft: rgba(255,255,255,0.7);
+    --color-error: #ef4444;
 }

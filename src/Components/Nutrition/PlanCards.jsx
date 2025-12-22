@@ -1,4 +1,4 @@
-export default function PlanCards({ selectedPlan, onSelect }) {
+ function PlanCards({ selectedPlan, onSelect }) {
     const plans = [
         { id: "cut", title: "Cutting", desc: "Lose fat with calorie deficit" },
         { id: "bulk", title: "Bulking", desc: "Gain muscle with calorie surplus" },
@@ -8,7 +8,7 @@ export default function PlanCards({ selectedPlan, onSelect }) {
     return (
         <div>
             <h3 className="text-2xl font-extrabold mb-4">
-                Choose Your <span className="text-[#E10600]">Goal</span>
+                Choose Your <span className="text-[var(--color-primary)]">Goal</span>
             </h3>
 
             <div className="grid grid-cols-3 gap-6">
@@ -19,21 +19,23 @@ export default function PlanCards({ selectedPlan, onSelect }) {
                         className={`
                             cursor-pointer
                             border rounded-xl p-6 transition
-                            hover:-translate-y-1 hover:border-[#E10600]
+                            hover:-translate-y-1 hover:border-[var(--color-primary)]
                             ${
                             selectedPlan === plan.id
-                                ? "border-[#E10600] bg-[#E10600]/15"
-                                : "border-[#E10600]/50"
+                                ? "border-[var(--color-primary)] bg-[var(--color-primary)]/15"
+                                : "border-[var(--color-primary)]/50"
                         }
                         `}
                     >
-                        <h4 className="text-xl font-bold text-[#E10600] mb-2">
+                        <h4 className="text-xl font-bold text-[var(--color-primary)] mb-2">
                             {plan.title}
                         </h4>
-                        <p className="text-white/80">{plan.desc}</p>
+                        <p className="text-[var(--color-text-muted)]">{plan.desc}</p>
                     </div>
                 ))}
             </div>
         </div>
     );
 }
+
+ export default PlanCards;

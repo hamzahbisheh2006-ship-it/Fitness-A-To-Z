@@ -1,4 +1,4 @@
-export default function NutritionResult({ maintenance, plan }) {
+ function NutritionResult({ maintenance, plan }) {
     if (!maintenance) return null;
 
     let calories = maintenance;
@@ -23,12 +23,14 @@ export default function NutritionResult({ maintenance, plan }) {
     }
 
     return (
-        <div className="border border-[#E10600] rounded-2xl p-6">
+        <div className="border border-[var(--color-primary)] rounded-2xl p-6">
             <h3 className="text-2xl font-extrabold mb-2">{title}</h3>
-            <p className="text-5xl font-extrabold text-[#E10600] mb-2">
+            <p className="text-5xl font-extrabold text-[var(--color-primary)] mb-2">
                 {calories} kcal
             </p>
-            <p className="text-white/80">{desc}</p>
+            <p className="text-[var(--color-text-muted)]">{desc}</p>
         </div>
     );
 }
+
+ export default NutritionResult;
