@@ -7,8 +7,4 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> origin/supplements2
