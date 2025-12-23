@@ -1,0 +1,134 @@
+{
+  "memberships": [
+    {
+      "title": "Basic Plan",
+      "price": "$20",
+      "features": [
+        "Access to gym equipment",
+        "Free bottled water",
+        "Locker room access"
+      ]
+    },
+    {
+      "title": "Pro Plan",
+      "price": "$40",
+      "features": [
+        "All Basic features",
+        "1 personal training session per week",
+        "Customized nutrition plan"
+      ]
+    },
+    {
+      "title": "Advance Plan",
+      "price": "$60",
+      "features": [
+        "All Pro features",
+        "3 personal training sessions per week",
+        "Advanced nutrition & supplement guidance"
+      ]
+    }
+  ],
+
+  "staff": [
+    {
+      "name": "Deaa Al-Khaldi",
+      "role": "Front Desk",
+      "image": "../../assets/Pictures/MembershipPictures/Face1.png",
+      "description": "Welcoming members with a smile and helping with their queries."
+    },
+    {
+      "name": "Yahya Zyoud",
+      "role": "Yoga Instructor",
+      "image": "../../assets/Pictures/MembershipPictures/Face2.png",
+      "description": "Guides members through yoga and flexibility routines."
+    },
+    {
+      "name": "Murad Alydi",
+      "role": "Front Desk",
+      "image": "../../assets/Pictures/MembershipPictures/Face3.png",
+      "description": "Ensures smooth operations at the reception and member support."
+    },
+    {
+      "name": "Maya Khalil",
+      "role": "Yoga Instructor",
+      "image": "../../assets/Pictures/MembershipPictures/Face4.png",
+      "description": "Leads yoga and wellness sessions for all skill levels."
+    }
+  ],
+
+  "personalTraining": [
+  {
+    "name": "John Carter",
+    "role": "Strength Coach",
+    "experience": "8+ years experience",
+    "specialty": "Powerlifting & Hypertrophy",
+    "description": "Helping athletes build raw strength and muscle with science-based programming.",
+    "image": "Coach1.png",
+    "phone": "+12345678901"
+  },
+  {
+    "name": "Mark Thompson",
+    "role": "Strength Coach",
+    "experience": "6+ years experience",
+    "specialty": "Weightlifting & Functional Training",
+    "description": "Focuses on proper form, endurance, and maximizing strength gains.",
+    "image": "Coach2.png",
+    "phone": "+12345678902"
+  },
+  {
+    "name": "Alex Morgan",
+    "role": "Strength Coach",
+    "experience": "5+ years experience",
+    "specialty": "Hypertrophy & Conditioning",
+    "description": "Combines strength and cardio techniques for optimal muscle growth.",
+    "image": "Coach1.png",
+    "phone": "+12345678903"
+  },
+  {
+    "name": "Sara Williams",
+    "role": "Fitness Coach",
+    "experience": "6+ years experience",
+    "specialty": "Weight Loss & Conditioning",
+    "description": "Guides members in fat loss, endurance, and healthy lifestyle habits.",
+    "image": "Coach2.png",
+    "phone": "+12345678904"
+  },
+  {
+    "name": "Emily Rogers",
+    "role": "Fitness Coach",
+    "experience": "4+ years experience",
+    "specialty": "HIIT & Functional Training",
+    "description": "Specializes in high-intensity training to boost metabolism and strength.",
+    "image": "Coach1.png",
+    "phone": "+12345678905"
+  },
+  {
+    "name": "Michael Brown",
+    "role": "Fitness Coach",
+    "experience": "7+ years experience",
+    "specialty": "Strength & Conditioning",
+    "description": "Focuses on personalized programs to improve overall athletic performance.",
+    "image": "Coach2.png",
+    "phone": "+12345678906"
+  },
+  {
+    "name": "Olivia Lee",
+    "role": "Fitness Coach",
+    "experience": "5+ years experience",
+    "specialty": "Functional Fitness & Mobility",
+    "description": "Helps clients improve movement, flexibility, and joint health.",
+    "image": "Coach1.png",
+    "phone": "+12345678907"
+  },
+  {
+    "name": "Sara Williams",
+    "role": "Fitness Coach",
+    "experience": "6+ years experience",
+    "specialty": "Weight Loss & Conditioning",
+    "description": "Provides structured training plans for sustainable fat loss.",
+    "image": "Coach2.png",
+    "phone": "+12345678904"
+  }
+]
+  
+}

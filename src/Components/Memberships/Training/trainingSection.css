@@ -1,0 +1,176 @@
+ /* Personal Training Section */
+.personalTrainingSection {
+  padding: 100px 20px;
+  background: #101010;
+  Border-top: 5px solid;
+  border-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), black) 1;
+}
+
+.personalTrainingHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.personalTrainingHeader h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.personalTrainingHeader p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+/* Cards Grid */
+.personalTrainingCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Card */
+.personalTrainingCard {
+  position: relative;
+  height: 480px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s linear;
+}
+.personalTrainingCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 55px rgba(0,0,0,0.5);
+}
+.personalTrainingImage {
+  position: absolute;
+  inset: 0;
+}
+
+.personalTrainingImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right;
+  
+}
+.personalTrainingCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(230deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.35),
+    rgba(233, 29, 29, 0.3)
+  );
+}
+.coachInfo {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.coachInfo h3 {
+  padding-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.coachRole {
+  color: #ff2c2c;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: auto;
+}
+.coachInfo ul {
+  list-style: none;
+  margin-bottom: 12px;
+  justify-self: flex-end;
+}
+.coachInfo ul li {
+  font-size: 0.85rem;
+  color: #dddddd;
+}
+.coachInfo p {
+  font-size: 0.85rem;
+  color: #cccccc;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.coachButton {
+  align-self: flex-start;
+  background: transparent;
+  border: 2px solid #b13333 !important;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.coachButton:hover {
+  background: #961818 !important;
+  color: #ffffff !important;
+}
+@media (max-width: 768px) {
+  .personalTrainingSection {
+    padding: 60px 12px;
+  }
+
+  .personalTrainingHeader {
+    margin-bottom: 40px;
+  }
+
+  .personalTrainingHeader h2 {
+    font-size: 1.9rem;
+  }
+
+  .personalTrainingHeader p {
+    font-size: 0.95rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .personalTrainingCards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .personalTrainingCard {
+    height: 420px;
+  }
+
+  .personalTrainingImage img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .coachInfo {
+    padding: 18px;
+  }
+
+  .coachInfo h3 {
+    font-size: 1.2rem;
+  }
+
+  .coachRole {
+    font-size: 0.8rem;
+  }
+
+  .coachInfo ul li,
+  .coachInfo p {
+    font-size: 0.8rem;
+  }
+
+  .coachButton {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+}
+
