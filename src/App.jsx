@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import SupplementsPage from './pages/Supplements';
+import SupplementsPage from './pages/supplementpage/Supplements';
 // import NutritionAndCalories from "./containers/NutritionAndCalories/NutritionAndCalories";
 
 function App() {

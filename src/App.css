@@ -1,15 +1,10 @@
-@import "tailwindcss";
 #root {
-  /* max-width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center; */
-  width: 100%;
-  background-color: var(--background);
+  text-align: center;
 }
-:root{
- --background: 240 10% 3.9%;
-}
+
 .logo {
   height: 6em;
   padding: 1.5em;
