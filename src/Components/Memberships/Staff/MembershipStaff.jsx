@@ -1,5 +1,5 @@
 import React from "react";
-import siteData from "../../../containers/Memberships/Memberships.json";
+import siteData from "../../../../public/MembershipsAPI/Memberships.json";
 import Face1 from "../../../assets/Pictures/MembershipPictures/Face1.png";
 import Face2 from "../../../assets/Pictures/MembershipPictures/Face2.png";
 import Face3 from "../../../assets/Pictures/MembershipPictures/Face3.png";

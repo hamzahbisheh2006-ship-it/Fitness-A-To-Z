@@ -1,8 +1,7 @@
-import siteData from "../../../containers/Memberships/Memberships.json";
+import siteData from "../../../../public/MembershipsAPI/Memberships.json";
 import Coach1 from "../../../assets/Pictures/MembershipPictures/coach1.png"
 import Coach2 from "../../../assets/Pictures/MembershipPictures/coach2.png"
-
-
+/* Material UI  */
 import Button from '@mui/material/Button';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Stack from '@mui/material/Stack';

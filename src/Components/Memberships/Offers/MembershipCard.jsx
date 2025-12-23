@@ -1,5 +1,5 @@
 import React from "react";
-import siteData from "../../../containers/Memberships/Memberships.json";
+import siteData from "../../../../public/MembershipsAPI/Memberships.json";
 /* Material UI  */
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
