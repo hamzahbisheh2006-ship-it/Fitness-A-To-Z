@@ -1,23 +1,16 @@
 @import "tailwindcss";
-
-.no-spinner::-webkit-inner-spin-button,
-.no-spinner::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.neon-btn{
+  padding:.75rem 2rem;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--neon-color);
+  background:transparent;
+  border:2px solid var(--neon-color);
+  border-radius:9999px;
+  transition:.25s;
 }
-
-.no-spinner {
-    -moz-appearance: textfield;
-}
-
-@theme {
-
-    --color-primary: #E10600;
-    --color-primary-hover: #c10500;
-    --color-bg-main: #000000;
-    --color-bg-overlay: rgba(0,0,0,0.75);
-    --color-text-main: #ffffff;
-    --color-text-muted: rgba(255,255,255,0.8);
-    --color-text-muted-soft: rgba(255,255,255,0.7);
-    --color-error: #ef4444;
+.neon-btn:hover{background:rgba(239,68,68,.12);color:#fff}
+.neon-btn:active{transform:scale(.97)}
+html {
+  scrollbar-gutter: stable;
 }
