@@ -1,7 +1,8 @@
 import "./Exercises.css";
 import { useEffect, useMemo, useState } from "react";
-import Button from "@mui/material/Button";
 
+import MuscleTabs from "../../Components/exercises_page_components/MuscleTabs";
+import ExerciseCard from "../../Components/exercises_page_components/ExerciseCard";
 
 import chestImg from "../../assets/pictures/hamza.images/chest.png";
 import backImg from "../../assets/pictures/hamza.images/back.png";
@@ -51,62 +52,19 @@ export default function Exercises() {
         EXERCISE <span className="accent">LIBRARY</span>
       </h1>
 
- 
-      <div className="ex-tabs">
-        {MUSCLES.map((m) => {
-          const active = m === activeMuscle;
-          return (
-            <Button
-              key={m}
-              variant={active ? "contained" : "outlined"}
-              onClick={() => setActiveMuscle(m)}
-              sx={{
-                borderRadius: "999px",
-                px: 3,
-                py: 1,
-                fontWeight: 700,
-                borderColor: "rgba(255,255,255,0.2)",
-                color: active ? "white" : "rgba(255,255,255,0.7)",
-                backgroundColor: active ? "#dc2626" : "transparent",
-                "&:hover": {
-                  borderColor: "rgba(255,255,255,0.4)",
-                  backgroundColor: active ? "#b91c1c" : "rgba(255,255,255,0.06)",
-                },
-              }}
-            >
-              {m.toUpperCase()}
-            </Button>
-          );
-        })}
-      </div>
+      <MuscleTabs
+        muscles={MUSCLES}
+        activeMuscle={activeMuscle}
+        onChange={setActiveMuscle}
+      />
 
-     
       <div className="ex-grid">
         {filtered.map((ex) => (
-          <a
+          <ExerciseCard
             key={ex.id}
-            href={ex.video}
-            target="_blank"
-            rel="noreferrer"
-            className="ex-card"
-            title="Open video"
-          >
-            <div className="ex-card-imgwrap">
-              <img
-                src={IMAGES[ex.imageKey] || chestImg}
-                alt={ex.name}
-              />
-            </div>
-
-            <div className="ex-card-overlay" />
-
-            <div className="ex-card-text">
-              <div className="ex-card-name">{ex.name}</div>
-              <div className="ex-card-target">
-                {ex.target} {ex.head ? `• ${ex.head}` : ""}
-              </div>
-            </div>
-          </a>
+            ex={ex}
+            imgSrc={IMAGES[ex.imageKey] || chestImg}
+          />
         ))}
       </div>
 
@@ -116,6 +74,4 @@ export default function Exercises() {
       </div>
     </div>
   );
-  
 }
-
