@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-red-950 text-white py-10 px-4 sm:px-6 w-full">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10 text-center md:text-left">
         
-        {/* Brand & Motivation */}
+        
         <div className="flex flex-col gap-3 items-center md:items-start">
           <h2 className="text-2xl font-extrabold tracking-wide">
             Fitness Gym <span className="text-black">A to Z</span>
@@ -18,7 +18,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Contact */}
+        
         <div className="flex flex-col gap-2 items-center md:items-start">
           <h3 className="font-bold text-xl mb-2">Contact Us</h3>
           <p>Mobile: +970 598 123 456 📞</p>
@@ -26,7 +26,7 @@ const Footer = () => {
           <p>Email: info@gymfitness.com ✉️</p>
         </div>
 
-        {/* Social */}
+        
         <div className="flex flex-col gap-3 items-center md:items-start">
           <h3 className="font-bold text-xl mb-2">Follow Us</h3>
           <div className="flex gap-4 text-2xl">
