@@ -3,8 +3,6 @@ import NutritionForm from "../../Components/Nutrition/NutritionForm";
 import PlanCards from "../../Components/Nutrition/PlanCards";
 import NutritionResult from "../../Components/Nutrition/NutritionResult";
 import MealSuggestions from "../../Components/Nutrition/MealSuggestions.jsx";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer"
 import nutritionPic from "../../assets/NutrittionPictures/nutritionPic.jpg";
 
 export default function NutritionAndCalories() {
@@ -44,11 +42,11 @@ export default function NutritionAndCalories() {
                 backgroundImage:`url(${nutritionPic})`,
             }}
         >
-            <Header />
+            {/*<Header />*/}
             <div className="min-h-screen bg-black/75 backdrop-blur-sm text-white">
 
 
-                <div className="px-6 pt-28 pb-16">
+                <div className="px-4 md:px-6 pt-24 md:pt-28">
                     <div className="max-w-5xl mx-auto space-y-10">
 
                         <NutritionForm onCalculate={calculate} />
@@ -85,7 +83,7 @@ export default function NutritionAndCalories() {
                         )}
                     </div>
                 </div>
-                <Footer/>
+                {/* <Footer/>*/}
             </div>
         </div>
     );

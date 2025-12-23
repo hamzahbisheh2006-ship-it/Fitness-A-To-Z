@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
     } = useForm();
 
     return (
-        <div className="border border-[var(--color-primary)] rounded-2xl p-8">
+        <div className="border border-[var(--color-primary)] rounded-2xl p-5 md:p-8 ">
             <h2 className="text-3xl font-extrabold mb-2">
                 Calculate Your <span className="text-[var(--color-primary)]">Calories</span>
             </h2>

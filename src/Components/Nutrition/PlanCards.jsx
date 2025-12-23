@@ -11,7 +11,7 @@
                 Choose Your <span className="text-[var(--color-primary)]">Goal</span>
             </h3>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {plans.map((plan) => (
                     <div
                         key={plan.id}
