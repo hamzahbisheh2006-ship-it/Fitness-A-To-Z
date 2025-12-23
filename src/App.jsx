@@ -5,6 +5,7 @@ import NutritionAndCalories from "./containers/NutritionAndCalories/NutritionAnd
 import Memberships from "./containers/Memberships/Memberships";
 import About from "./containers/About/About";
 import SupplementsPage from './pages/supplementpage/Supplements';
+import News from "./containers/NewsPage/News";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
        <Route path="/memberships" element={<Memberships />} />
         <Route path="/exercises" element={<Exercises />} />
         <Route path="/Supplements" element={<SupplementsPage />} />
+        <Route path="/News" element={<News />} />
     </Routes>
   );
 

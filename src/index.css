@@ -1,5 +1,19 @@
 @import "tailwindcss";
-
+.neon-btn{
+  padding:.75rem 2rem;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--neon-color);
+  background:transparent;
+  border:2px solid var(--neon-color);
+  border-radius:9999px;
+  transition:.25s;
+}
+.neon-btn:hover{background:rgba(239,68,68,.12);color:#fff}
+.neon-btn:active{transform:scale(.97)}
+html {
+  scrollbar-gutter: stable;
+}
 .no-spinner::-webkit-inner-spin-button,
 .no-spinner::-webkit-outer-spin-button {
     -webkit-appearance: none;
