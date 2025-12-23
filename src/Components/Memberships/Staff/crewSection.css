@@ -28,8 +28,9 @@
   justify-content: space-around;
   padding:20px;
   background-color:#b0b0b0;
-  border-bottom: 8px solid;
+  border-bottom: 5px solid;
   border-image: linear-gradient(to left, rgba(255, 0, 0, 0.5), black) 1;
+
 
 }
 .crewCard {
