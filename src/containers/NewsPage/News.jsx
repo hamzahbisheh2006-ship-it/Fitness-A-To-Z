@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
 
 import NewsHero from "../../Components/News/NewsHero";
 import LatestNewsSection from "../../Components/News/LatestNewsSection";
@@ -52,6 +54,7 @@ export default function News() {
 
   return (
     <>
+      <Header />
       <NewsHero
         onExploreNews={() => scrollTo("latest-news")}
         onViewEvents={() => scrollTo("upcoming-events")}
@@ -94,6 +97,7 @@ export default function News() {
         }}
       />
       <DetailsModal open={modalOpen} item={selected} onClose={closeDetails} />
+      <Footer />
     </>
   );
 }
