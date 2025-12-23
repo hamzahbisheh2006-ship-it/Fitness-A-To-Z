@@ -10,6 +10,9 @@ import legsImg from "../../assets/pictures/hamza.images/legs.png";
 import shouldersImg from "../../assets/pictures/hamza.images/shoulders.png";
 import armsImg from "../../assets/pictures/hamza.images/arms.png";
 
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
+
 const MUSCLES = ["chest", "back", "legs", "shoulders", "arms"];
 
 const IMAGES = {
@@ -47,31 +50,35 @@ export default function Exercises() {
   }
 
   return (
-    <div className="ex-page ex-page-offset">
-      <h1 className="ex-title">
-        EXERCISE <span className="accent">LIBRARY</span>
-      </h1>
+    <>
+      <Header />
+      <div className="ex-page ex-page-offset">
+        <h1 className="ex-title">
+          EXERCISE <span className="accent">LIBRARY</span>
+        </h1>
 
-      <MuscleTabs
-        muscles={MUSCLES}
-        activeMuscle={activeMuscle}
-        onChange={setActiveMuscle}
-      />
+        <MuscleTabs
+          muscles={MUSCLES}
+          activeMuscle={activeMuscle}
+          onChange={setActiveMuscle}
+        />
 
-      <div className="ex-grid">
-        {filtered.map((ex) => (
-          <ExerciseCard
-            key={ex.id}
-            ex={ex}
-            imgSrc={IMAGES[ex.imageKey] || chestImg}
-          />
-        ))}
+        <div className="ex-grid">
+          {filtered.map((ex) => (
+            <ExerciseCard
+              key={ex.id}
+              ex={ex}
+              imgSrc={IMAGES[ex.imageKey] || chestImg}
+            />
+          ))}
+        </div>
+
+        <div className="ex-footer">
+          Showing <span className="strong">{filtered.length}</span> exercises for{" "}
+          <span className="strong">{activeMuscle.toUpperCase()}</span>
+        </div>
       </div>
-
-      <div className="ex-footer">
-        Showing <span className="strong">{filtered.length}</span> exercises for{" "}
-        <span className="strong">{activeMuscle.toUpperCase()}</span>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }
