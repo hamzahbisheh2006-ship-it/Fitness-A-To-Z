@@ -6,5 +6,7 @@ export default defineConfig({
     plugins: [
         react(),
         tailwindcss(),
+        
     ],
+    base: "/Fitness-A-To-Z/",
 });
