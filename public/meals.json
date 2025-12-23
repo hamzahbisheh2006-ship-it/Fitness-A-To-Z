@@ -1,0 +1,17 @@
+{
+  "cut": [
+    { "type": "Breakfast", "name": "Oats with Banana", "calories": 350 },
+    { "type": "Lunch", "name": "Grilled Chicken with Rice", "calories": 500 },
+    { "type": "Dinner", "name": "Tuna Salad", "calories": 300 }
+  ],
+  "bulk": [
+    { "type": "Breakfast", "name": "Eggs and Toast", "calories": 600 },
+    { "type": "Lunch", "name": "Beef with Pasta", "calories": 800 },
+    { "type": "Dinner", "name": "Chicken and Rice", "calories": 700 }
+  ],
+  "recomp": [
+    { "type": "Breakfast", "name": "Greek Yogurt", "calories": 400 },
+    { "type": "Lunch", "name": "Chicken with Quinoa", "calories": 550 },
+    { "type": "Dinner", "name": "Fish and Vegetables", "calories": 450 }
+  ]
+}
