@@ -4,6 +4,7 @@ import Exercises from "./containers/Exercises_page/Exercises";
 import NutritionAndCalories from "./containers/NutritionAndCalories/NutritionAndCalories";
 import Memberships from "./containers/Memberships/Memberships";
 import About from "./containers/About/About";
+import SupplementsPage from './pages/supplementpage/Supplements';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <Route path="/about" element={<About />} />
        <Route path="/memberships" element={<Memberships />} />
         <Route path="/exercises" element={<Exercises />} />
+        <Route path="/Supplements" element={<SupplementsPage />} />
     </Routes>
   );
+
 }
 export default App;
