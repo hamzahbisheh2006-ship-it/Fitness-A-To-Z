@@ -21,7 +21,7 @@ const Header = () => {
           <NavLink to="/Nutrition" className={linkClass}>Nutrition</NavLink>
           <NavLink to="/Exercises" className={linkClass}>EXERCISES</NavLink>
           <NavLink to="/Supplements" className={linkClass}>SUPPLEMENTS</NavLink>
-          <NavLink to="/Coaches" className={linkClass}>COACHES</NavLink>
+          <NavLink to="/Memberships" className={linkClass}>Memberships</NavLink>
           <NavLink to="/News" className={linkClass}>NEWS</NavLink>
           <NavLink to="/About" className={linkClass}>ABOUT</NavLink>
         </nav>
@@ -42,7 +42,7 @@ const Header = () => {
     <NavLink to="/Nutrition" className={linkClass} onClick={() => setOpen(false)}>Nutrition</NavLink>
     <NavLink to="/Exercises" className={linkClass} onClick={() => setOpen(false)}>EXERCISES</NavLink>
     <NavLink to="/Supplements" className={linkClass} onClick={() => setOpen(false)}>SUPPLEMENTS</NavLink>
-    <NavLink to="/Coaches" className={linkClass} onClick={() => setOpen(false)}>COACHES</NavLink>
+    <NavLink to="/Memberships" className={linkClass} onClick={() => setOpen(false)}>Memberships</NavLink>
     <NavLink to="/News" className={linkClass} onClick={() => setOpen(false)}>NEWS</NavLink>
     <NavLink to="/About" className={linkClass} onClick={() => setOpen(false)}>ABOUT</NavLink>
   </nav>

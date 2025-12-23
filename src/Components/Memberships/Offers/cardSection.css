@@ -1,0 +1,167 @@
+
+.CardSection {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  min-height: 100vh;
+  padding: 60px 20px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("../../../assets/Pictures/MembershipPictures/gymreception.jpg");
+
+  background-size: 95%;
+  background-position: center;
+  background-attachment: fixed;
+}
+.membershipText {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+.membershipText h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.membershipText p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  color: #d0d0d0;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+
+  width: 100%;
+}
+/*Membership Card*/
+.MembershipCard {
+  background: rgba(20, 20, 20, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  flex: 1 1 clamp(180px, 20vw, 230px);
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: 160px 1fr 60px;
+  min-height: 380px;
+  max-width: 230px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.MembershipCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.9);
+}
+.UpperMembershipCard {
+  margin: 15px;
+  background: linear-gradient(135deg, #e10600, #ff2c2c);
+  color: white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.UpperMembershipCard h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.price {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-top: 6px;
+}
+.featuresList {
+  list-style: none;
+  padding: 20px;
+}
+.featuresList li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+.cardButton {
+  margin: 12px;
+  /* background: transparent; */
+  background-color: #e10600 !important;
+  color: #ffffff;
+  border: 2px solid #ff2c2c;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cardButton:hover {
+  background: #a81d1d !important;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .CardSection {
+    padding: 40px 10px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .membershipText h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .membershipText p {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .cardsWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .MembershipCard {
+    flex: 1 1 90%;
+    max-width: 90%;
+    min-height: 320px;
+    grid-template-rows: 140px 1fr 50px;
+  }
+
+  .UpperMembershipCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .featuresList li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+
+  .cardButton {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+}
