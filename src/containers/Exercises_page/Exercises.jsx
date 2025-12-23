@@ -29,7 +29,7 @@ export default function Exercises() {
   const [activeMuscle, setActiveMuscle] = useState("chest");
 
   useEffect(() => {
-    fetch("/ex.api/exercises.json")
+    fetch(`${import.meta.env.BASE_URL}ex.api/exercises.json`)
       .then((res) => res.json())
       .then((data) => {
         setExercises(Array.isArray(data) ? data : []);
