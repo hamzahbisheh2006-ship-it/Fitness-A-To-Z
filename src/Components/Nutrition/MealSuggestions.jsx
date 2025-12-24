@@ -14,7 +14,8 @@ import { useEffect, useState } from "react";
         setLoading(true);
         setError("");
 
-        fetch("/meals.json")
+        fetch(`${import.meta.env.BASE_URL}meals.json`)
+
             .then((res) => res.json())
             .then((data) => {
                 setMeals(data[plan] || []);
