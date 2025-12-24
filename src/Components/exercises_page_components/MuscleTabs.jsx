@@ -1,4 +1,6 @@
+import "./MuscleTabs.css";
 import Button from "@mui/material/Button";
+
 
 export default function MuscleTabs({ muscles, activeMuscle, onChange }) {
   return (

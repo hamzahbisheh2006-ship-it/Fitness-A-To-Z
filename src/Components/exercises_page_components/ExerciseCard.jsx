@@ -1,3 +1,4 @@
+import "./ExerciseCard.css";
 export default function ExerciseCard({ ex, imgSrc }) {
   return (
     <a
